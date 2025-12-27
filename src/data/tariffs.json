@@ -1,0 +1,522 @@
+[
+  {
+    "tardoc": "EA.00.0010",
+    "tarmed": "02.0010",
+    "professions": ["Arzt | Ärztin"],
+    "description": "Erste Sitzung",
+    "maxMinutes": 90,
+    "presence": true
+  },
+  {
+    "tardoc": "EA.00.0020",
+    "tarmed": "02.0020",
+    "professions": ["Arzt | Ärztin"],
+    "description": "Einzelsitzung",
+    "maxMinutes": 75,
+    "presence": true
+  },
+  {
+    "tardoc": "EA.00.0070",
+    "tarmed": "02.0020",
+    "professions": ["Arzt | Ärztin"],
+    "description": "Einzelsitzung Telemedizinisch",
+    "maxMinutes": 75,
+    "presence": true
+  },
+  {
+    "tardoc": "EA.00.0030",
+    "tarmed": "02.0030",
+    "professions": ["Arzt | Ärztin"],
+    "description": "Paartherapie",
+    "maxMinutes": 105,
+    "presence": true
+  },
+  {
+    "tardoc": "EA.00.0040",
+    "tarmed": "02.0040",
+    "professions": ["Arzt | Ärztin"],
+    "description": "Familien-/Gruppentherapie",
+    "maxMinutes": 105,
+    "presence": true
+  },
+  {
+    "tardoc": "EA.00.0050",
+    "tarmed": "02.0040",
+    "professions": ["Arzt | Ärztin"],
+    "description": "Familien-/Gruppentherapie",
+    "maxMinutes": 105,
+    "presence": true
+  },
+  {
+    "tardoc": "EA.00.0050",
+    "tarmed": "02.0050",
+    "professions": ["Arzt | Ärztin"],
+    "description": "Familien-/Gruppentherapie",
+    "maxMinutes": 105,
+    "presence": true
+  },
+  {
+    "tardoc": "EA.00.0060",
+    "tarmed": "02.0050",
+    "professions": ["Arzt | Ärztin"],
+    "description": "Familien-/Gruppentherapie",
+    "maxMinutes": 105,
+    "presence": true
+  },
+  {
+    "tardoc": "EA.00.0110",
+    "tarmed": "02.0060",
+    "professions": ["Arzt | Ärztin"],
+    "description": "Telefon",
+    "maxMinutes": 20,
+    "presence": true
+  },
+  {
+    "tardoc": "EA.00.0120",
+    "tarmed": "02.0060",
+    "professions": ["Arzt | Ärztin"],
+    "description": "Mail",
+    "maxMinutes": 5,
+    "presence": true
+  },
+  {
+    "tardoc": "EA.00.0110",
+    "tarmed": "02.0066",
+    "professions": ["Arzt | Ärztin"],
+    "description": "Telefon",
+    "maxMinutes": 20,
+    "presence": true
+  },
+  {
+    "tardoc": "EA.00.0120",
+    "tarmed": "02.0066",
+    "professions": ["Arzt | Ärztin"],
+    "description": "Mail",
+    "maxMinutes": 5,
+    "presence": true
+  },
+  {
+    "tardoc": "EA.00.0090",
+    "tarmed": "02.0080",
+    "professions": ["Arzt | Ärztin"],
+    "description": "Krisenintervention",
+    "maxMinutes": 180,
+    "presence": true
+  },
+  {
+    "tardoc": "EA.00.0130",
+    "tarmed": "02.0080",
+    "professions": ["Arzt | Ärztin"],
+    "description": "Telefonische Krisenintervention",
+    "maxMinutes": null,
+    "presence": true
+  },
+  {
+    "tardoc": "EA.00.0250",
+    "tarmed": "02.0090",
+    "professions": ["Arzt | Ärztin"],
+    "description": "Testabklärung",
+    "maxMinutes": 150,
+    "presence": true
+  },
+  {
+    "tardoc": "EA.00.0100",
+    "tarmed": "02.0090",
+    "professions": ["Arzt | Ärztin"],
+    "description": "Wegzeit für FachArzt | Ärztin",
+    "maxMinutes": 60,
+    "presence": true
+  },
+  {
+    "tardoc": "EA.00.0140",
+    "tarmed": "02.0071",
+    "professions": ["Arzt | Ärztin"],
+    "description": "Aktenstudium",
+    "maxMinutes": null,
+    "presence": false
+  },
+  {
+    "tardoc": "EA.00.0150",
+    "tarmed": "02.0072",
+    "professions": ["Arzt | Ärztin"],
+    "description": "Erkundigen bei Dritten",
+    "maxMinutes": null,
+    "presence": false
+  },
+  {
+    "tardoc": "EA.00.0160",
+    "tarmed": "02.0073",
+    "professions": ["Arzt | Ärztin"],
+    "description": "Auskünfte an Angehörige",
+    "maxMinutes": null,
+    "presence": false
+  },
+  {
+    "tardoc": "EA.00.0170",
+    "tarmed": "02.0074",
+    "professions": ["Arzt | Ärztin"],
+    "description": "Besprechen mit Therapeuten",
+    "maxMinutes": null,
+    "presence": false
+  },
+  {
+    "tardoc": "EA.00.0200",
+    "tarmed": "02.0075",
+    "professions": ["Arzt | Ärztin"],
+    "description": "Überweisung an Konsiliarärzte",
+    "maxMinutes": null,
+    "presence": false
+  },
+  {
+    "tardoc": "EA.00.0190",
+    "tarmed": "02.0076",
+    "professions": ["Arzt | Ärztin"],
+    "description": "Ausstellen von Rezepten",
+    "maxMinutes": null,
+    "presence": false
+  },
+  {
+    "tardoc": "EA.00.0210",
+    "tarmed": "02.0076",
+    "professions": ["Arzt | Ärztin"],
+    "description": "Leistungen Auftrag Versicherers",
+    "maxMinutes": null,
+    "presence": false
+  },
+  {
+    "tardoc": "EA.00.0220",
+    "tarmed": "02.0076",
+    "professions": ["Arzt | Ärztin"],
+    "description": "Erstellen ärztliches Zeugnis",
+    "maxMinutes": null,
+    "presence": false
+  },
+  {
+    "tardoc": "EA.00.0230",
+    "tarmed": "00.2285",
+    "professions": ["Arzt | Ärztin"],
+    "description": "Erstellung ärztlicher Bericht",
+    "maxMinutes": null,
+    "presence": false
+  },
+  {
+    "tardoc": "EA.00.0240",
+    "tarmed": "00.2285",
+    "professions": ["Arzt | Ärztin"],
+    "description": "Erstellung ärztlicher Bericht",
+    "maxMinutes": null,
+    "presence": false
+  },
+  {
+    "tardoc": "AA.25.0010",
+    "tarmed": "00.2285",
+    "professions": ["Arzt | Ärztin"],
+    "description": "Erstellung ärztlicher Bericht",
+    "maxMinutes": null,
+    "presence": false
+  },
+  {
+    "tardoc": "AA.25.0020",
+    "tarmed": "00.2285",
+    "professions": ["Arzt | Ärztin"],
+    "description": "Erstellung ärztlicher Bericht",
+    "maxMinutes": null,
+    "presence": false
+  },
+  {
+    "tardoc": "AA.25.0030",
+    "tarmed": "00.2295",
+    "professions": ["Arzt | Ärztin"],
+    "description": "Erstellung ärztlicher Bericht",
+    "maxMinutes": null,
+    "presence": false
+  },
+  {
+    "tardoc": "AA.25.0040",
+    "tarmed": "00.2295",
+    "professions": ["Arzt | Ärztin"],
+    "description": "Erstellung ärztlicher Bericht",
+    "maxMinutes": null,
+    "presence": false
+  },
+  {
+    "tardoc": "EA.05.0010",
+    "tarmed": "02.0310",
+    "professions": ["Sozialarbeiter:in", "Pflegefachperson"],
+    "description": "Gespräch mit Patient",
+    "maxMinutes": null,
+    "presence": null
+  },
+  {
+    "tardoc": "EA.05.0050",
+    "tarmed": "02.0310",
+    "professions": ["Sozialarbeiter:in", "Pflegefachperson"],
+    "description": "Krisenintervention mit Patient",
+    "maxMinutes": null,
+    "presence": null
+  },
+  {
+    "tardoc": "EA.05.0020",
+    "tarmed": "02.0320",
+    "professions": ["Sozialarbeiter:in"],
+    "description": "Paargespräch",
+    "maxMinutes": null,
+    "presence": null
+  },
+  {
+    "tardoc": "EA.05.0030",
+    "tarmed": "02.0330",
+    "professions": ["Sozialarbeiter:in"],
+    "description": "Familiengespräch",
+    "maxMinutes": null,
+    "presence": null
+  },
+  {
+    "tardoc": "EA.05.0040",
+    "tarmed": "02.0340",
+    "professions": ["Sozialarbeiter:in", "Pflegefachperson"],
+    "description": "Gruppengespräch",
+    "maxMinutes": null,
+    "presence": null
+  },
+  {
+    "tardoc": "EA.05.0070",
+    "tarmed": "02.0350",
+    "professions": ["Sozialarbeiter:in", "Pflegefachperson"],
+    "description": "Telefon mit Patient",
+    "maxMinutes": null,
+    "presence": null
+  },
+  {
+    "tardoc": "EA.05.0080",
+    "tarmed": "02.0350",
+    "professions": ["Sozialarbeiter:in", "Pflegefachperson"],
+    "description": "Mail an Patient",
+    "maxMinutes": null,
+    "presence": null
+  },
+  {
+    "tardoc": "EA.05.0090",
+    "tarmed": "02.0350",
+    "professions": ["Sozialarbeiter:in", "Pflegefachperson"],
+    "description": "Krisengespräch telefonisch",
+    "maxMinutes": null,
+    "presence": null
+  },
+  {
+    "tardoc": "EA.05.0080",
+    "tarmed": "02.0360",
+    "professions": ["Sozialarbeiter:in", "Pflegefachperson"],
+    "description": "Mail an Dritte",
+    "maxMinutes": null,
+    "presence": null
+  },
+  {
+    "tardoc": "EA.05.0100",
+    "tarmed": "02.0360",
+    "professions": ["Sozialarbeiter:in", "Pflegefachperson"],
+    "description": "Studium Fremdakten",
+    "maxMinutes": null,
+    "presence": null
+  },
+  {
+    "tardoc": "EA.05.0110",
+    "tarmed": "02.0360",
+    "professions": ["Sozialarbeiter:in", "Pflegefachperson"],
+    "description": "Auskünfte an Dritte",
+    "maxMinutes": null,
+    "presence": null
+  },
+  {
+    "tardoc": "EA.05.0120",
+    "tarmed": "02.0360",
+    "professions": ["Sozialarbeiter:in", "Pflegefachperson"],
+    "description": "Auskünfte an Angehörige",
+    "maxMinutes": null,
+    "presence": null
+  },
+  {
+    "tardoc": "EA.05.0130",
+    "tarmed": "02.0360",
+    "professions": ["Sozialarbeiter:in", "Pflegefachperson"],
+    "description": "Besprechung mit Therapeuten",
+    "maxMinutes": null,
+    "presence": null
+  },
+  {
+    "tardoc": "EA.05.0140",
+    "tarmed": "02.0360",
+    "professions": ["Sozialarbeiter:in", "Pflegefachperson"],
+    "description": "Schriftliche Therapieplanung",
+    "maxMinutes": null,
+    "presence": null
+  },
+  {
+    "tardoc": "EA.05.0150",
+    "tarmed": "02.0360",
+    "professions": ["Sozialarbeiter:in", "Pflegefachperson"],
+    "description": "Testabklärung",
+    "maxMinutes": null,
+    "presence": null
+  },
+  {
+    "tardoc": "AK.00.0120",
+    "tarmed": null,
+    "professions": ["Pflegefachperson"],
+    "description": "Medikamentenverabreichung",
+    "maxMinutes": null,
+    "presence": null
+  },
+  {
+    "tardoc": "1686.00",
+    "tarmed": "1686.00",
+    "professions": ["Pflegefachperson"],
+    "description": "Urinscreening",
+    "maxMinutes": null,
+    "presence": null
+  },
+  {
+    "tardoc": "1687.00",
+    "tarmed": "1687.00",
+    "professions": ["Pflegefachperson"],
+    "description": "Urinscreening",
+    "maxMinutes": null,
+    "presence": null
+  },
+  {
+    "tardoc": "AK.00.0130",
+    "tarmed": "00.0160",
+    "professions": ["Pflegefachperson"],
+    "description": "Urinscreening",
+    "maxMinutes": null,
+    "presence": null
+  },
+  {
+    "tardoc": "EA.00.0250",
+    "tarmed": "02.0071",
+    "professions": ["Pflegefachperson"],
+    "description": "Urinscreening",
+    "maxMinutes": null,
+    "presence": null
+  },
+  {
+    "tardoc": "1740.00",
+    "tarmed": "1740.00",
+    "professions": ["Pflegefachperson"],
+    "description": "Comburtest",
+    "maxMinutes": null,
+    "presence": null
+  },
+  {
+    "tardoc": "TK.00.0010",
+    "tarmed": "17.0010",
+    "professions": ["Pflegefachperson"],
+    "description": "EKG",
+    "maxMinutes": null,
+    "presence": null
+  },
+  {
+    "tardoc": "AK.00.0020",
+    "tarmed": "00.0715",
+    "professions": ["Pflegefachperson"],
+    "description": "Blutentnahme",
+    "maxMinutes": null,
+    "presence": null
+  },
+  {
+    "tardoc": "1700.01",
+    "tarmed": "1700.01",
+    "professions": ["Pflegefachperson"],
+    "description": "Quick",
+    "maxMinutes": null,
+    "presence": null
+  },
+  {
+    "tardoc": "AK.00.0010",
+    "tarmed": "00.0716",
+    "professions": ["Pflegefachperson"],
+    "description": "Blutentnahme kapillär",
+    "maxMinutes": null,
+    "presence": null
+  },
+  {
+    "tardoc": "AK.00.0080",
+    "tarmed": "00.1345",
+    "professions": ["Pflegefachperson"],
+    "description": "Verband einfach",
+    "maxMinutes": null,
+    "presence": null
+  },
+  {
+    "tardoc": "AK.00.0070",
+    "tarmed": "02.0310",
+    "professions": ["Pflegefachperson"],
+    "description": "Verband komplex",
+    "maxMinutes": null,
+    "presence": null
+  },
+  {
+    "tardoc": "AK.00.0050",
+    "tarmed": "00.0750",
+    "professions": ["Pflegefachperson"],
+    "description": "Injektion",
+    "maxMinutes": null,
+    "presence": null
+  },
+  {
+    "tardoc": "PAxxx",
+    "tarmed": "PAxxx",
+    "professions": ["Psychologe | Psychologin"],
+    "description": "Psychologische Leistung",
+    "maxMinutes": null,
+    "presence": null
+  },
+  {
+    "tardoc": "PBxxx",
+    "tarmed": "PBxxx",
+    "professions": ["Psychologe | Psychologin"],
+    "description": "Psychologische Leistung",
+    "maxMinutes": null,
+    "presence": null
+  },
+  {
+    "tardoc": "PExxx",
+    "tarmed": "PExxx",
+    "professions": ["Psychologe | Psychologin"],
+    "description": "Psychologische Leistung",
+    "maxMinutes": null,
+    "presence": null
+  },
+  {
+    "tardoc": "PKxxx",
+    "tarmed": "PKxxx",
+    "professions": ["Psychologe | Psychologin"],
+    "description": "Psychologische Leistung",
+    "maxMinutes": null,
+    "presence": null
+  },
+  {
+    "tardoc": "PLxxx",
+    "tarmed": "PLxxx",
+    "professions": ["Psychologe | Psychologin"],
+    "description": "Psychologische Leistung",
+    "maxMinutes": null,
+    "presence": null
+  },
+  {
+    "tardoc": "PNxxx",
+    "tarmed": "PNxxx",
+    "professions": ["Psychologe | Psychologin"],
+    "description": "Psychologische Leistung",
+    "maxMinutes": null,
+    "presence": null
+  },
+  {
+    "tardoc": "PWxxx",
+    "tarmed": "PWxxx",
+    "professions": ["Psychologe | Psychologin"],
+    "description": "Psychologische Leistung",
+    "maxMinutes": null,
+    "presence": null
+  }
+]
