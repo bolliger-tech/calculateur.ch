@@ -242,7 +242,7 @@
   {
     "tardoc": "EA.05.0010",
     "tarmed": "02.0310",
-    "professions": ["Sozialarbeiter:in", "Pflegefachperson"],
+    "professions": ["Pflege / Sozis"],
     "description": "Gespräch mit Patient",
     "maxMinutes": null,
     "presence": null
@@ -250,7 +250,7 @@
   {
     "tardoc": "EA.05.0050",
     "tarmed": "02.0310",
-    "professions": ["Sozialarbeiter:in", "Pflegefachperson"],
+    "professions": ["Pflege / Sozis"],
     "description": "Krisenintervention mit Patient",
     "maxMinutes": null,
     "presence": null
@@ -258,7 +258,7 @@
   {
     "tardoc": "EA.05.0020",
     "tarmed": "02.0320",
-    "professions": ["Sozialarbeiter:in"],
+    "professions": ["Pflege / Sozis"],
     "description": "Paargespräch",
     "maxMinutes": null,
     "presence": null
@@ -266,7 +266,7 @@
   {
     "tardoc": "EA.05.0030",
     "tarmed": "02.0330",
-    "professions": ["Sozialarbeiter:in"],
+    "professions": ["Pflege / Sozis"],
     "description": "Familiengespräch",
     "maxMinutes": null,
     "presence": null
@@ -274,7 +274,7 @@
   {
     "tardoc": "EA.05.0040",
     "tarmed": "02.0340",
-    "professions": ["Sozialarbeiter:in", "Pflegefachperson"],
+    "professions": ["Pflege / Sozis"],
     "description": "Gruppengespräch",
     "maxMinutes": null,
     "presence": null
@@ -282,7 +282,7 @@
   {
     "tardoc": "EA.05.0070",
     "tarmed": "02.0350",
-    "professions": ["Sozialarbeiter:in", "Pflegefachperson"],
+    "professions": ["Pflege / Sozis"],
     "description": "Telefon mit Patient",
     "maxMinutes": null,
     "presence": null
@@ -290,7 +290,7 @@
   {
     "tardoc": "EA.05.0080",
     "tarmed": "02.0350",
-    "professions": ["Sozialarbeiter:in", "Pflegefachperson"],
+    "professions": ["Pflege / Sozis"],
     "description": "Mail an Patient",
     "maxMinutes": null,
     "presence": null
@@ -298,7 +298,7 @@
   {
     "tardoc": "EA.05.0090",
     "tarmed": "02.0350",
-    "professions": ["Sozialarbeiter:in", "Pflegefachperson"],
+    "professions": ["Pflege / Sozis"],
     "description": "Krisengespräch telefonisch",
     "maxMinutes": null,
     "presence": null
@@ -306,7 +306,7 @@
   {
     "tardoc": "EA.05.0080",
     "tarmed": "02.0360",
-    "professions": ["Sozialarbeiter:in", "Pflegefachperson"],
+    "professions": ["Pflege / Sozis"],
     "description": "Mail an Dritte",
     "maxMinutes": null,
     "presence": null
@@ -314,7 +314,7 @@
   {
     "tardoc": "EA.05.0100",
     "tarmed": "02.0360",
-    "professions": ["Sozialarbeiter:in", "Pflegefachperson"],
+    "professions": ["Pflege / Sozis"],
     "description": "Studium Fremdakten",
     "maxMinutes": null,
     "presence": null
@@ -322,7 +322,7 @@
   {
     "tardoc": "EA.05.0110",
     "tarmed": "02.0360",
-    "professions": ["Sozialarbeiter:in", "Pflegefachperson"],
+    "professions": ["Pflege / Sozis"],
     "description": "Auskünfte an Dritte",
     "maxMinutes": null,
     "presence": null
@@ -330,7 +330,7 @@
   {
     "tardoc": "EA.05.0120",
     "tarmed": "02.0360",
-    "professions": ["Sozialarbeiter:in", "Pflegefachperson"],
+    "professions": ["Pflege / Sozis"],
     "description": "Auskünfte an Angehörige",
     "maxMinutes": null,
     "presence": null
@@ -338,7 +338,7 @@
   {
     "tardoc": "EA.05.0130",
     "tarmed": "02.0360",
-    "professions": ["Sozialarbeiter:in", "Pflegefachperson"],
+    "professions": ["Pflege / Sozis"],
     "description": "Besprechung mit Therapeuten",
     "maxMinutes": null,
     "presence": null
@@ -346,7 +346,7 @@
   {
     "tardoc": "EA.05.0140",
     "tarmed": "02.0360",
-    "professions": ["Sozialarbeiter:in", "Pflegefachperson"],
+    "professions": ["Pflege / Sozis"],
     "description": "Schriftliche Therapieplanung",
     "maxMinutes": null,
     "presence": null
@@ -354,7 +354,7 @@
   {
     "tardoc": "EA.05.0150",
     "tarmed": "02.0360",
-    "professions": ["Sozialarbeiter:in", "Pflegefachperson"],
+    "professions": ["Pflege / Sozis"],
     "description": "Testabklärung",
     "maxMinutes": null,
     "presence": null
@@ -362,7 +362,7 @@
   {
     "tardoc": "AK.00.0120",
     "tarmed": null,
-    "professions": ["Pflegefachperson"],
+    "professions": ["Pflege / Sozis"],
     "description": "Medikamentenverabreichung",
     "maxMinutes": null,
     "presence": null
@@ -370,7 +370,7 @@
   {
     "tardoc": "1686.00",
     "tarmed": "1686.00",
-    "professions": ["Pflegefachperson"],
+    "professions": ["Pflege / Sozis"],
     "description": "Urinscreening",
     "maxMinutes": null,
     "presence": null
@@ -378,7 +378,7 @@
   {
     "tardoc": "1687.00",
     "tarmed": "1687.00",
-    "professions": ["Pflegefachperson"],
+    "professions": ["Pflege / Sozis"],
     "description": "Urinscreening",
     "maxMinutes": null,
     "presence": null
@@ -386,7 +386,7 @@
   {
     "tardoc": "AK.00.0130",
     "tarmed": "00.0160",
-    "professions": ["Pflegefachperson"],
+    "professions": ["Pflege / Sozis"],
     "description": "Urinscreening",
     "maxMinutes": null,
     "presence": null
@@ -394,7 +394,7 @@
   {
     "tardoc": "EA.00.0250",
     "tarmed": "02.0071",
-    "professions": ["Pflegefachperson"],
+    "professions": ["Pflege / Sozis"],
     "description": "Urinscreening",
     "maxMinutes": null,
     "presence": null
@@ -402,7 +402,7 @@
   {
     "tardoc": "1740.00",
     "tarmed": "1740.00",
-    "professions": ["Pflegefachperson"],
+    "professions": ["Pflege / Sozis"],
     "description": "Comburtest",
     "maxMinutes": null,
     "presence": null
@@ -410,7 +410,7 @@
   {
     "tardoc": "TK.00.0010",
     "tarmed": "17.0010",
-    "professions": ["Pflegefachperson"],
+    "professions": ["Pflege / Sozis"],
     "description": "EKG",
     "maxMinutes": null,
     "presence": null
@@ -418,7 +418,7 @@
   {
     "tardoc": "AK.00.0020",
     "tarmed": "00.0715",
-    "professions": ["Pflegefachperson"],
+    "professions": ["Pflege / Sozis"],
     "description": "Blutentnahme",
     "maxMinutes": null,
     "presence": null
@@ -426,7 +426,7 @@
   {
     "tardoc": "1700.01",
     "tarmed": "1700.01",
-    "professions": ["Pflegefachperson"],
+    "professions": ["Pflege / Sozis"],
     "description": "Quick",
     "maxMinutes": null,
     "presence": null
@@ -434,7 +434,7 @@
   {
     "tardoc": "AK.00.0010",
     "tarmed": "00.0716",
-    "professions": ["Pflegefachperson"],
+    "professions": ["Pflege / Sozis"],
     "description": "Blutentnahme kapillär",
     "maxMinutes": null,
     "presence": null
@@ -442,7 +442,7 @@
   {
     "tardoc": "AK.00.0080",
     "tarmed": "00.1345",
-    "professions": ["Pflegefachperson"],
+    "professions": ["Pflege / Sozis"],
     "description": "Verband einfach",
     "maxMinutes": null,
     "presence": null
@@ -450,7 +450,7 @@
   {
     "tardoc": "AK.00.0070",
     "tarmed": "02.0310",
-    "professions": ["Pflegefachperson"],
+    "professions": ["Pflege / Sozis"],
     "description": "Verband komplex",
     "maxMinutes": null,
     "presence": null
@@ -458,65 +458,257 @@
   {
     "tardoc": "AK.00.0050",
     "tarmed": "00.0750",
-    "professions": ["Pflegefachperson"],
+    "professions": ["Pflege / Sozis"],
     "description": "Injektion",
     "maxMinutes": null,
     "presence": null
   },
   {
-    "tardoc": "PAxxx",
-    "tarmed": "PAxxx",
-    "professions": ["Psychologe | Psychologin"],
-    "description": "Psychologische Leistung",
-    "maxMinutes": null,
-    "presence": null
+    "tardoc": "PA010",
+    "tarmed": "PA010",
+    "professions": ["Psycholog:in"],
+    "description": "Therapiegespräch (Psychologisch)",
+    "maxMinutes": 90,
+    "presence": true
   },
   {
-    "tardoc": "PBxxx",
-    "tarmed": "PBxxx",
-    "professions": ["Psychologe | Psychologin"],
-    "description": "Psychologische Leistung",
-    "maxMinutes": null,
-    "presence": null
+    "tardoc": "PA011",
+    "tarmed": "PA011",
+    "professions": ["Psycholog:in"],
+    "description": "Telefongespräch (Psychologisch)",
+    "maxMinutes": 90,
+    "presence": true
   },
   {
-    "tardoc": "PExxx",
-    "tarmed": "PExxx",
-    "professions": ["Psychologe | Psychologin"],
-    "description": "Psychologische Leistung",
-    "maxMinutes": null,
-    "presence": null
+    "tardoc": "PA020",
+    "tarmed": "PA020",
+    "professions": ["Psycholog:in"],
+    "description": "Paartherapie",
+    "maxMinutes": 105,
+    "presence": true
   },
   {
-    "tardoc": "PKxxx",
-    "tarmed": "PKxxx",
-    "professions": ["Psychologe | Psychologin"],
-    "description": "Psychologische Leistung",
-    "maxMinutes": null,
-    "presence": null
+    "tardoc": "PA021",
+    "tarmed": "PA021",
+    "professions": ["Psycholog:in"],
+    "description": "Paartherapie telefonisch",
+    "maxMinutes": 105,
+    "presence": true
   },
   {
-    "tardoc": "PLxxx",
-    "tarmed": "PLxxx",
-    "professions": ["Psychologe | Psychologin"],
-    "description": "Psychologische Leistung",
-    "maxMinutes": null,
-    "presence": null
+    "tardoc": "PA030",
+    "tarmed": "PA030",
+    "professions": ["Psycholog:in"],
+    "description": "Familientherapie",
+    "maxMinutes": 105,
+    "presence": true
   },
   {
-    "tardoc": "PNxxx",
-    "tarmed": "PNxxx",
-    "professions": ["Psychologe | Psychologin"],
-    "description": "Psychologische Leistung",
-    "maxMinutes": null,
-    "presence": null
+    "tardoc": "PA031",
+    "tarmed": "PA031",
+    "professions": ["Psycholog:in"],
+    "description": "Familientherapie telefonisch",
+    "maxMinutes": 105,
+    "presence": true
   },
   {
-    "tardoc": "PWxxx",
-    "tarmed": "PWxxx",
-    "professions": ["Psychologe | Psychologin"],
-    "description": "Psychologische Leistung",
+    "tardoc": "PA040",
+    "tarmed": "PA040",
+    "professions": ["Psycholog:in"],
+    "description": "Gruppentherapie",
+    "maxMinutes": 105,
+    "presence": true
+  },
+  {
+    "tardoc": "PA041",
+    "tarmed": "PA041",
+    "professions": ["Psycholog:in"],
+    "description": "Gruppentherapie telefonisch",
+    "maxMinutes": 105,
+    "presence": true
+  },
+  {
+    "tardoc": "PA042",
+    "tarmed": "PA042",
+    "professions": ["Psycholog:in"],
+    "description": "Gruppentherapie mit Co-Therapeuten",
+    "maxMinutes": 105,
+    "presence": true
+  },
+  {
+    "tardoc": "PA110",
+    "tarmed": "PA110",
+    "professions": ["Psycholog:in"],
+    "description": "Krisenintervention",
+    "maxMinutes": 180,
+    "presence": true
+  },
+  {
+    "tardoc": "PA111",
+    "tarmed": "PA111",
+    "professions": ["Psycholog:in"],
+    "description": "Krisenintervention telefonisch",
+    "maxMinutes": 180,
+    "presence": true
+  },
+  {
+    "tardoc": "PA220",
+    "tarmed": "PA220",
+    "professions": ["Psycholog:in"],
+    "description": "Testdiagnostik mit Patient",
+    "maxMinutes": 180,
+    "presence": true
+  },
+  {
+    "tardoc": "PA230",
+    "tarmed": "PA230",
+    "professions": ["Psycholog:in"],
+    "description": "Expositionstherapie",
+    "maxMinutes": 360,
+    "presence": true
+  },
+  {
+    "tardoc": "PB010",
+    "tarmed": "PB010",
+    "professions": ["Psycholog:in"],
+    "description": "Kurztherapie",
+    "maxMinutes": 180,
+    "presence": true
+  },
+  {
+    "tardoc": "PB011",
+    "tarmed": "PB011",
+    "professions": ["Psycholog:in"],
+    "description": "Kurztherapie telefonisch",
+    "maxMinutes": 180,
+    "presence": true
+  },
+  {
+    "tardoc": "PE010",
+    "tarmed": "PE010",
+    "professions": ["Psycholog:in"],
+    "description": "Vor- und Nachbereitung Sitzung",
+    "maxMinutes": 15,
+    "presence": false
+  },
+  {
+    "tardoc": "PE020",
+    "tarmed": "PE020",
+    "professions": ["Psycholog:in"],
+    "description": "Auswertung Testdiagnostik",
+    "maxMinutes": 240,
+    "presence": false
+  },
+  {
+    "tardoc": "PE030",
+    "tarmed": "PE030",
+    "professions": ["Psycholog:in"],
+    "description": "Schriftliche Therapieplanung",
+    "maxMinutes": 15,
+    "presence": false
+  },
+  {
+    "tardoc": "PE040",
+    "tarmed": "PE040",
+    "professions": ["Psycholog:in"],
+    "description": "Aktenstudium",
     "maxMinutes": null,
-    "presence": null
+    "presence": false
+  },
+  {
+    "tardoc": "PE045",
+    "tarmed": "PE045",
+    "professions": ["Psycholog:in"],
+    "description": "Aktenstudium",
+    "maxMinutes": null,
+    "presence": false
+  },
+  {
+    "tardoc": "PK010",
+    "tarmed": "PK010",
+    "professions": ["Psycholog:in"],
+    "description": "Koordination mit Ärzt/innen",
+    "maxMinutes": null,
+    "presence": false
+  },
+  {
+    "tardoc": "PK015",
+    "tarmed": "PK015",
+    "professions": ["Psycholog:in"],
+    "description": "Koordination mit Ärzt/innen",
+    "maxMinutes": null,
+    "presence": false
+  },
+  {
+    "tardoc": "PK020",
+    "tarmed": "PK020",
+    "professions": ["Psycholog:in"],
+    "description": "Koordination mit Dritten",
+    "maxMinutes": null,
+    "presence": false
+  },
+  {
+    "tardoc": "PK025",
+    "tarmed": "PK025",
+    "professions": ["Psycholog:in"],
+    "description": "Koordination mit Dritten",
+    "maxMinutes": null,
+    "presence": false
+  },
+  {
+    "tardoc": "PL010",
+    "tarmed": "PL010",
+    "professions": ["Psycholog:in"],
+    "description": "Psychotherapeutischer Bericht an Arzt",
+    "maxMinutes": null,
+    "presence": false
+  },
+  {
+    "tardoc": "PL015",
+    "tarmed": "PL015",
+    "professions": ["Psycholog:in"],
+    "description": "Psychotherapeutischer Bericht an Arzt",
+    "maxMinutes": null,
+    "presence": false
+  },
+  {
+    "tardoc": "PL020",
+    "tarmed": "PL020",
+    "professions": ["Psycholog:in"],
+    "description": "Psychotherapeutischer Bericht",
+    "maxMinutes": null,
+    "presence": false
+  },
+  {
+    "tardoc": "PL025",
+    "tarmed": "PL025",
+    "professions": ["Psycholog:in"],
+    "description": "Psychotherapeutischer Bericht",
+    "maxMinutes": null,
+    "presence": false
+  },
+  {
+    "tardoc": "PN010",
+    "tarmed": "PN010",
+    "professions": ["Psycholog:in"],
+    "description": "Notfallaufwand",
+    "maxMinutes": 20,
+    "presence": false
+  },
+  {
+    "tardoc": "PN020",
+    "tarmed": "PN020",
+    "professions": ["Psycholog:in"],
+    "description": "Notfallzuschlag",
+    "maxMinutes": null,
+    "presence": false
+  },
+  {
+    "tardoc": "PW010",
+    "tarmed": "PW010",
+    "professions": ["Psycholog:in"],
+    "description": "Wegentschädigung",
+    "maxMinutes": 60,
+    "presence": false
   }
 ]

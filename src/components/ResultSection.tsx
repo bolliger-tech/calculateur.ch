@@ -38,13 +38,21 @@ export function ResultSection({
   )
 
   const sortedProfessionGroups = useMemo(
-    () =>
-      Object.values(professionGroups)
-        .sort((a, b) => a[0].profession.localeCompare(b[0].profession))
+    () => {
+      const professionOrder = ['Arzt | Ärztin', 'Psycholog:in', 'Pflege / Sozis']
+      return Object.values(professionGroups)
+        .sort((a, b) => {
+          const indexA = professionOrder.indexOf(a[0].profession)
+          const indexB = professionOrder.indexOf(b[0].profession)
+          const orderA = indexA === -1 ? professionOrder.length : indexA
+          const orderB = indexB === -1 ? professionOrder.length : indexB
+          return orderA - orderB
+        })
         .map((group) => {
           group.sort((a, b) => a.name.localeCompare(b.name))
           return group
-        }),
+        })
+    },
     [professionGroups],
   )
 
@@ -98,6 +106,7 @@ export function ResultSection({
           }, new Map()),
           profession: 'Alle Berufe',
           errors: [],
+          rows: employeeData.flatMap(emp => emp.rows ?? []),
         }}
         monthString={monthString}
         className="gradient-border mt-4"
@@ -136,6 +145,7 @@ export function ResultSection({
                 }, new Map()),
                 profession: employees[0].profession,
                 errors: [],
+                rows: employees.flatMap(emp => emp.rows ?? []),
               }}
               monthString={monthString}
               className="gradient-border"

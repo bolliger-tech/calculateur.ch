@@ -5,6 +5,12 @@ import {
 } from '../hooks/useCsvAggregation'
 import { twMerge } from 'tailwind-merge'
 
+const professionColorMap: Record<string, string> = {
+  'Arzt | Ärztin': 'text-blue-400',
+  'Psycholog:in': 'text-purple-400',
+  'Pflege / Sozis': 'text-green-400',
+}
+
 function formatMinutes(minutes: number): string {
   const hours = Math.floor(minutes / 60)
   const rest = minutes % 60
@@ -81,7 +87,7 @@ export function EmployeeCard({
   return (
     <section
       className={twMerge(
-        'rounded-xl border border-slate-500 bg-slate-900/70 p-4 shadow-sm break-inside-avoid-page',
+        'rounded-xl border border-slate-500 bg-slate-900/70 p-4 shadow-sm break-inside-avoid-page not-last:break-after-page',
         className,
       )}
     >
@@ -127,7 +133,7 @@ export function EmployeeCard({
                   pattern="[.,0-9]*"
                   placeholder="HH:MM"
                   aria-invalid={isInvalid}
-                  className={`text-slate-50 placeholder-slate-400 placeholder:text-sm placeholder:text-center border-b px-0 py-0 outline-none w-15 px-1 text-right bg-slate-800/60 ${
+                  className={`text-slate-50 placeholder-slate-400 placeholder:text-sm placeholder:text-center border-b py-0 outline-none w-15 px-1 text-right bg-slate-800/60 ${
                     isInvalid
                       ? 'border-b-red-500 focus:border-b-red-500'
                       : 'border-b-slate-900 focus:border-b-indigo-400'
@@ -159,21 +165,42 @@ export function EmployeeCard({
                 <th></th>
                 <th className="px-2 py-1 text-right">Minuten</th>
                 <th className="px-2 py-1 text-right">HH:MM</th>
+                <th className="px-2 py-1 text-right">%</th>
               </tr>
             </thead>
             <tbody>
-              {sortedSums.map(([tariffCode, { tariff, minutes }]) => (
-                <tr key={tariffCode} className="border-t border-slate-800/60">
-                  <td className="px-2 py-1 font-medium w-20">{tariffCode}</td>
-                  <td className="px-2 py-1 font-medium">
-                    {tariff?.description ?? 'Unbekannter Tarif'}
-                  </td>
-                  <td className="px-2 py-1 text-right">{minutes}</td>
-                  <td className="px-2 py-1 text-right text-slate-400">
-                    {formatMinutes(minutes)}
-                  </td>
-                </tr>
-              ))}
+              {sortedSums.map(([tariffCode, { tariff, minutes }]) => {
+                const tariffProfession = tariff?.professions[0]
+                const tariffColor = tariffProfession
+                  ? professionColorMap[tariffProfession]
+                  : 'test-slate-400'
+                return (
+                  <tr key={tariffCode} className="border-t border-slate-800/60">
+                    <td
+                      className={twMerge(
+                        'px-2 py-1 font-medium w-20',
+                        tariffColor,
+                      )}
+                    >
+                      {tariffCode}
+                    </td>
+                    <td className="px-2 py-1 font-medium">
+                      {tariff?.description ?? 'Unbekannter Tarif'}
+                    </td>
+                    <td className="px-2 py-1 text-right tabular-nums">
+                      {minutes}
+                    </td>
+                    <td className="px-2 py-1 text-right text-slate-400 tabular-nums">
+                      {formatMinutes(minutes)}
+                    </td>
+                    <td className="px-2 py-1 text-right tabular-nums">
+                      {totalMinutes > 0
+                        ? ((minutes / totalMinutes) * 100).toFixed(1)
+                        : '0.0'}
+                    </td>
+                  </tr>
+                )
+              })}
             </tbody>
           </table>
         </div>

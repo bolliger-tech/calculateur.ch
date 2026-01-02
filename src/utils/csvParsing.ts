@@ -1,6 +1,10 @@
 import Papa from 'papaparse'
 import type { EmployeeData } from '../hooks/useCsvAggregation'
 
+const TIMESTAMP_COLUMN_INDEX = 2
+const EMPLOYEE_COLUMN_INDEX = 3
+const TARIFF_COLUMN_INDEX = 7
+
 export interface ParsedRow {
   month: string
   employee: string
@@ -30,6 +34,26 @@ function parsetariffAndDuration(
   return { tariff, minutes }
 }
 
+function parseRow(row: string[], columnShift: number): ParsedRow | null | false {
+  const timestamp = row[TIMESTAMP_COLUMN_INDEX + columnShift]?.trim()
+  const employee = row[EMPLOYEE_COLUMN_INDEX + columnShift]?.trim()
+  const tariffField = row[TARIFF_COLUMN_INDEX + columnShift]?.trim()
+
+  const monthKey = timestamp ? parseTimestampToMonthKey(timestamp) : null
+
+  if (!monthKey || !employee || !tariffField) return null
+
+  const tariffParsed = parsetariffAndDuration(tariffField)
+  if (!tariffParsed) return false
+
+  return ({
+    month: monthKey,
+    employee,
+    minutes: tariffParsed.minutes,
+    tariff: tariffParsed.tariff,
+  })
+}
+
 export function parseText(text: string) {
   const data = {
     totalRowsCount: 0,
@@ -49,26 +73,20 @@ export function parseText(text: string) {
   const candidates = parsed.data
 
   for (const row of candidates) {
-    const timestamp = row[1]?.trim()
-    const employee = row[2]?.trim()
-    const tariffField = row[6]?.trim()
-
-    const monthKey = timestamp ? parseTimestampToMonthKey(timestamp) : null
-    if (!monthKey) continue
-    data.totalRowsCount += 1
-    if (!employee || !tariffField) {
+    const parsedRow = parseRow(row, 0) ?? parseRow(row, -1) // if the file was opened in Excel, the columns are shifted by -1
+    if (parsedRow === null) {
+      // skip rows with other data
       continue
     }
 
-    const tariffParsed = parsetariffAndDuration(tariffField)
-    if (!tariffParsed) continue
+    data.totalRowsCount += 1
 
-    data.rows.push({
-      month: monthKey,
-      employee,
-      minutes: tariffParsed.minutes,
-      tariff: tariffParsed.tariff,
-    })
+    if (parsedRow === false) {
+      // skip unparsable tariff/duration rows
+      continue
+    }
+
+    data.rows.push(parsedRow)
   }
 
   return { data, error }
@@ -80,7 +98,7 @@ export function buildCsvFromEmployeeTariffSums(
   const rows: string[][] = [['employee', 'tariff', 'totalMinutes']]
   const employees = employeeData.sort((a, b) => a.name.localeCompare(b.name))
   for (const employee of employees) {
-    const tariffs = Object.entries(employee.sums).sort(([a], [b]) =>
+    const tariffs = Array.from(employee.sums.entries()).sort(([a], [b]) =>
       a.localeCompare(b),
     )
     for (const [tariff, sum] of tariffs) {

@@ -16,12 +16,12 @@ export function Stats({
           {stats.totalRows}
         </span>
         <span className="pill bg-emerald-800/40 px-3 py-1">
-          Gültig:
+          Aktueller Monat:
           {' '}
           {stats.validRows}
         </span>
         <span className="pill bg-amber-800/40 px-3 py-1">
-          Übersprungen:
+          Fehler / andere Monate (nicht berücksichtigt):
           {' '}
           {stats.skippedRows}
         </span>

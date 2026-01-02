@@ -34,8 +34,16 @@ export interface ErrorRow {
   error: string
 }
 
+export interface Billing extends Omit<ParsedRow, 'tariff'> {
+  tariff: {
+    code: TariffCode
+    details: Tariff | undefined
+  }
+}
+
 export interface EmployeeData {
   name: EmployeeName
+  rows: Billing[]
   sums: TariffSums
   profession: string
   errors: ErrorRow[]
@@ -66,13 +74,12 @@ function getTariffDetails(tariffCode: TariffCode): Tariff | undefined {
   )
 }
 
-function sumByTariff(rows: ParsedRow[]): TariffSums {
+function sumByTariff(rows: Billing[]): TariffSums {
   return rows.reduce((acc, row) => {
-    const existing = acc.get(row.tariff) ?? { minutes: 0, tariff: undefined }
-    const tariffInfo = getTariffDetails(row.tariff)
-    acc.set(row.tariff, {
+    const existing = acc.get(row.tariff.code) ?? { minutes: 0, tariff: undefined }
+    acc.set(row.tariff.code, {
       minutes: existing.minutes + row.minutes,
-      tariff: tariffInfo,
+      tariff: row.tariff.details,
     })
     return acc
   }, new Map())
@@ -81,14 +88,7 @@ function sumByTariff(rows: ParsedRow[]): TariffSums {
 function guessProfession(sums: TariffSums): string {
   const professionScores = new Map<string, number>()
 
-  for (const [tariffCode, { tariff }] of sums.entries()) {
-    if (tariffCode.startsWith('P') && !tariff) {
-      professionScores.set(
-        'Psycholog:in',
-        (professionScores.get('Psycholog:in') ?? 0) + 1,
-      )
-      continue
-    }
+  for (const [, { tariff }] of sums.entries()) {
     if (!tariff) continue
     if (tariff.professions.length === 0) continue
     if (tariff.professions.length === 1) {
@@ -116,19 +116,25 @@ function guessProfession(sums: TariffSums): string {
   return sortedProfessions[0][0]
 }
 
-function getEmployeeErrors(profession: string, sums: TariffSums): ErrorRow[] {
+function getEmployeeErrors(profession: string, sums: TariffSums, rows: Billing[]): ErrorRow[] {
   const errors: ErrorRow[] = []
 
-  for (const [tariffCode, { minutes, tariff }] of sums.entries()) {
-    if (!tariff) continue
-
-    if (tariff.maxMinutes !== null && minutes > tariff.maxMinutes) {
+  for (const { tariff, minutes } of rows) {
+    if (!tariff.details) continue
+    const maxMinutes = tariff.details.maxMinutes
+    if (maxMinutes === null) continue
+    const tariffCode = tariff.code
+    if (minutes > maxMinutes) {
       errors.push({
         tariff: tariffCode,
         minutes,
-        error: `Maximale Minuten für Tarif ${tariffCode} überschritten (${minutes} > ${tariff.maxMinutes})`,
+        error: `Es können max. ${maxMinutes} Minuten für Tarif ${tariffCode} abgerechnet werden`,
       })
     }
+  }
+
+  for (const [tariffCode, { minutes, tariff }] of sums.entries()) {
+    if (!tariff) continue
 
     if (
       tariff.professions.length > 0
@@ -145,13 +151,14 @@ function getEmployeeErrors(profession: string, sums: TariffSums): ErrorRow[] {
   return errors
 }
 
-function getEmployeeData(name: EmployeeName, sums: TariffSums): EmployeeData {
+function getEmployeeData(name: EmployeeName, sums: TariffSums, rows: Billing[]): EmployeeData {
   const profession = guessProfession(sums)
   return {
     name: name.toLocaleUpperCase(),
+    rows,
     sums,
     profession,
-    errors: getEmployeeErrors(profession, sums),
+    errors: getEmployeeErrors(profession, sums, rows),
   }
 }
 
@@ -190,39 +197,47 @@ export const useCsvAggregation = (): UseCsvAggregationResult => {
     [handleTextParse],
   )
 
-  const rowsOfSelectedMonth = useMemo(
-    () => parsedRows.filter(row => row.month === selectedMonth),
+  const billsOfSelectedMonth = useMemo(
+    () => parsedRows
+      .filter(row => row.month === selectedMonth)
+      .map(row => ({
+        ...row,
+        tariff: {
+          code: row.tariff,
+          details: getTariffDetails(row.tariff),
+        },
+      })),
     [parsedRows, selectedMonth],
   )
 
-  const rowsByEmployee = useMemo(() => {
-    const employees = new Map<EmployeeName, ParsedRow[]>()
-    rowsOfSelectedMonth.forEach((row) => {
+  const billsByEmployee = useMemo(() => {
+    const employees = new Map<EmployeeName, Billing[]>()
+    billsOfSelectedMonth.forEach((row) => {
       if (!employees.has(row.employee)) {
         employees.set(row.employee, [])
       }
       employees.get(row.employee)?.push(row)
     })
     return employees
-  }, [rowsOfSelectedMonth])
+  }, [billsOfSelectedMonth])
 
   const employeeData = useMemo(
     () =>
-      Array.from(rowsByEmployee.entries()).map(([employee, rows]) => {
+      Array.from(billsByEmployee.entries()).map(([employee, rows]) => {
         const sums = sumByTariff(rows)
-        return getEmployeeData(employee, sums)
+        return getEmployeeData(employee, sums, rows)
       }),
-    [rowsByEmployee],
+    [billsByEmployee],
   )
 
   const stats = useMemo(() => {
-    const validRows = rowsOfSelectedMonth.length
+    const validRows = billsOfSelectedMonth.length
     return {
       totalRows,
       validRows,
       skippedRows: Math.max(totalRows - validRows, 0),
     }
-  }, [rowsOfSelectedMonth, totalRows])
+  }, [billsOfSelectedMonth, totalRows])
 
   const downloadCsv = useCallback(() => {
     const csv = buildCsvFromEmployeeTariffSums(employeeData)
